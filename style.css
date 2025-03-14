@@ -1,0 +1,185 @@
+
+h3 {
+  font-size: 45px;
+}
+
+p{
+  font-size: 30px;
+}
+
+
+#x1{
+  display: block;
+margin: 50px 50px;
+  height: 130px;
+  justify-content: space-between;
+  align-content: space-between;
+}
+
+  main {
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    top: 0; 
+  }
+  
+  main > * {
+    background-color: rgba(243, 5, 5, 0.404);
+  }
+  
+  canvas {
+    z-index: -1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  #nos{
+     
+    display: flex;
+
+    margin-top: 30px;
+    margin-left: 50px;
+    margin-right: 50px;
+    opacity: 80%;
+    justify-content: space-between;
+    font-size: 35px;
+    justify-items: center;
+    text-align: justify;
+  text-justify: inter-word;
+
+  }
+
+  #aa{
+   padding-right: 10px; 
+   padding-left: 10px;
+  }
+
+  #nos img{
+    height: 400px;
+    justify-self: center;
+    padding-top: 50px;
+    padding-right: 10px; 
+    padding-left: 10px;
+  }
+
+mark{
+  background-color:  rgb(181, 114, 228);
+}
+
+ button{
+	background:  rgb(181, 114, 228);
+	border-bottom: 6px inset rgba(0,0,0,.5);
+	border-left: 6px inset rgba(0,0,0,.5);
+	border-right: 6px inset rgba(255,255,255,.5);
+	border-top: 6px inset rgba(255, 255, 255, 0.5);
+	box-sizing: border-box;
+	
+	cursor: pointer;
+	display: inline-block;
+	font-size: 2.2rem;
+	margin: 1rem;
+	min-width: 200px;
+	padding: .5rem;
+	text-transform: uppercase;
+    text-emphasis-color: white;
+	width: auto;
+    font-family: 'VT323';
+    font-weight: bold;
+
+}
+
+
+body {
+    margin: 0;
+    color: antiquewhite;
+}
+
+a {
+
+    font-size: 28px;
+    color: blanchedalmond;
+  
+}
+
+h2 {
+    margin: 5px 0px;
+    color: #f0f0f7;
+    font-family: 'VT323';
+    font-size: 55px;
+ line-height: 55px;
+ letter-spacing: -0.64px;
+ font-weight: bold;
+ text-align: center;
+}
+
+
+#text{
+    padding-top: 50px;
+}
+
+header {
+    display: flex;
+    margin: 0px 100px;
+    justify-content: space-between;
+}
+
+.header__navigation {
+    display: flex;
+    align-items: center;
+
+}
+
+.header__navigation nav ul {
+    display: flex;
+    gap: 45px;
+    list-style: none;
+    padding-left: 100px;
+    padding-top: 50px;
+    
+}
+
+
+body {
+	font-family: 'VT323', monospace ;
+	
+}
+
+
+.header__navigation nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+#rr{
+    text-align: center;
+    padding: auto;
+    margin-top: 30px;
+    color: white;
+    font-size: 80px;
+    
+    
+}
+
+
+#lista{
+
+
+
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
+  opacity: 80%;
+  justify-content: space-between;
+  font-size: 35px;
+  text-align: justify;
+text-justify: inter-word;
+}
+
+#lista ul{
+  justify-content: center;
+}

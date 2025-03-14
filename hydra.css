@@ -1,0 +1,24 @@
+/* CSS files add styling rules to your content */
+
+  
+main {
+    z-index: 1;
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+  
+  main > * {
+    background-color: rgba(243, 5, 5, 0.404);
+  }
+  
+  canvas {
+    z-index: -1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+  }
