@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textile</title>
+      <link rel="stylesheet" href="./styles.css">
+        <link rel="icon" type="image/x-icon" href="./public/Images/favicon (1).ico">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=VT323" />
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=VT323" />
+  <link rel="stylesheet" href="https://indestructibletype.com/fonts/Jost.css" type="text/css" charset="utf-8" />
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="./hydra.css">
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=VT323" />
+  <link href='https://fonts.googleapis.com/css?family=VT323' rel='stylesheet'>
+  <!-- import the webpage's stylesheet -->
+  <link rel="stylesheet" href="./style.css" />
+  <link rel="stylesheet" href="/hydra.css">
+
+  <script src="./script.js"></script>
+  <!-- import the latest version of hydra synth-->
+  <script src="https://unpkg.com/hydra-synth"></script>
+  <script src="../p5.min.js"></script>
+  <!-- <script src="../addons/p5.sound.js"></script> -->
+  <script src="./script.js"></script>
+
+  <style>
+
+    
+    #final {
+    font-weight: bold;
+    color: rgb(162, 104, 215);
+}
+
+p {
+    font-size: 25px;
+     }
+
+    body {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .video-container {
+      padding: 10px;
+    }
+
+    iframe {
+      width: 100%;
+      height: 250px;
+    }
+
+    mark {
+      background-color: #a58da0;
+    }
+
+    #ro {
+      text-align: center;
+      padding-top: 20px;
+
+    }
+
+    .fullscreen-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.9);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            z-index:1;
+        }
+        .fullscreen-overlay img {
+            max-width: 90vw;
+            max-height: 90vh;
+            z-index:1;
+        }
+        .fullscreen-overlay.show {
+            visibility: visible;
+            opacity: 1;
+        }
+
+        /* Overlay Text on Hover */
+        .carousel-item {
+            position: relative;
+        }
+        .carousel-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            pointer-events: none; /* Fix to allow clicks on images */
+        }
+        .carousel-item:hover .carousel-overlay {
+            opacity: 1;
+        }
+#text {
+    background-color: rgba(86, 82, 82, 0.744)
+    }
+
+
+  </style>
+
+
+</head>
+<body>
+    
+
+  <div class="container mt-5">
+    <h2 class="text-center mb-4" id="final">TEXTILE ART</h2>
+
+    <div id="ro">
+      <p> <mark>
+          Interactive textile installation and masks (you can click on the images to see them in fullscreen)</mark>
+
+      </p>
+    </div>
+
+
+
+<div class="row align-items-center mb-5">
+
+    <!-- Carousel -->
+    <div class="col-md-6">
+        <div id="carousel1" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+                <div class="carousel-item active">
+                    <img src="./public/Images/wr0.jpg" class="d-block w-100 carousel-img">
+                    <div class="carousel-overlay">
+                       What remains?
+
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="./public/Images/wr1.jpg" class="d-block w-100 carousel-img">
+                    <div class="carousel-overlay">
+                    What remains?
+
+                    </div>
+                </div>
+
+        
+                        <div class="carousel-item">
+                            <img src="./public/Images/wr2.JPG" class="d-block w-100 carousel-img" alt="Image 5">
+                            <div class="carousel-overlay">What remains?                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./public/Images/wr3.JPG" class="d-block w-100 carousel-img" alt="Image 6">
+                            <div class="carousel-overlay">What remains?                            </div>
+                        </div>
+
+                        <div class="carousel-item">
+                            <img src="./public/Images/wr4.JPG" class="d-block w-100 carousel-img" alt="Image 7">
+                            <div class="carousel-overlay">What remains?                            </div>
+                        </div>
+                   
+
+            </div>
+
+            <button class="carousel-control-prev" type="button"
+                data-bs-target="#carousel1" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button"
+                data-bs-target="#carousel1" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+
+        </div>
+    </div>
+
+
+    <!-- Text Box -->
+    <div class="col-md-6">
+        <div class="p-4 border rounded shadow-sm" id="text">
+
+            <h1 style="font-family:VT323;">                        What remains?  
+</h1>
+
+            <p>
+   This is a sound and textile installation that invites the audience to interact using their touch, asking about the matter of time perception and space.
+A giant loom was woven from the inside out. Based on a monotonous pattern, the space was filled with mechanical repetitions. The threads still carry the memory of the weaver, a memory that contains us all, travelling through musical fragments of women in history and questioning the things that remain visible in the dominant narratives. <br>
+Concept and realization:  Sule Suarez and Gorka Egino <br>
+    <a href="https://www.youtube.com/watch?v=ukWEcPsaVHc" target="_blank">
+        Watch a video of the sound textile installation
+    </a>
+</p>
+
+        </div>
+    </div>
+
+</div>
+
+
+
+
+<div class="row align-items-center mb-5">
+
+    <!-- Carousel -->
+    <div class="col-md-6">
+        <div id="carousel2" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+
+
+                  <div class="carousel-item active">
+                            <img src="./public/Images/va7.jpg" class="d-block w-100 carousel-img" alt="Image 1">
+                            <div class="carousel-overlay">Selection of mask by  Vestidas y Alborotadas</div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./public/Images/va1.jpg" class="d-block w-100 carousel-img" alt="Image 2">
+                            <div class="carousel-overlay">Selection of mask by  Vestidas y Alborotadas</div>
+                        </div>
+                 
+                        <div class="carousel-item">
+                            <img src="./public/Images/va3.JPG" class="d-block w-100 carousel-img" alt="Image 4">
+                            <div class="carousel-overlay">Selection of mask by  Vestidas y Alborotadas</div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./public/Images/va4.JPG" class="d-block w-100 carousel-img" alt="Image 5">
+                            <div class="carousel-overlay">Selection of mask by  Vestidas y Alborotadas</div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./public/Images/va5.JPG" class="d-block w-100 carousel-img" alt="Image 6">
+                            <div class="carousel-overlay">Selection of mask by  Vestidas y Alborotadas</div>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="./public/Images/va6.jpg" class="d-block w-100 carousel-img" alt="Image 7">
+                            <div class="carousel-overlay">Selection of mask by  Vestidas y Alborotadas</div>
+                        </div>
+                   
+
+            </div>
+
+            <button class="carousel-control-prev" type="button"
+                data-bs-target="#carousel2" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+            </button>
+
+            <button class="carousel-control-next" type="button"
+                data-bs-target="#carousel2" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+            </button>
+
+        </div>
+    </div>
+    
+
+    <!-- Text Box -->
+    <div class="col-md-6">
+        <div class="p-4 border rounded shadow-sm" id="text">
+
+            <h3 style="font-family:VT323;">                       Selection of mask by  Vestidas y Alborotadas
+</h3>
+
+            <p>
+
+These monstrous beings made of discarded textile scraps from factories, hand-woven, are part of the stage setup by the collective "Vestidas y Alborotadas." These creatures leap from an open source interface to create an industrial and experimental sound experience using chaotic sounds. Additionally, they generate images where pixels burst using the open software tools Hydra and sound with SuperCollider.<br>
+    Elaborated by the collective "Vestidas y Alborotadas" (Sule Suarez and Juanita Prieto) <br>
+<a href="https://sucaritaesredonda.github.io/vestidas-alborotadas/" target="_blank">
+        See portfolio of Vestidas y Alborotadas collective
+    </a>
+</p>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+    <!-- Fullscreen Overlay -->
+    <div id="fullscreenOverlay" class="fullscreen-overlay" onclick="closeFullscreen()">
+        <img id="fullscreenImage" src="" alt="Fullscreen Image">
+    </div>
+
+    <script>
+        document.querySelectorAll('.carousel-img').forEach(img => {
+            img.addEventListener('click', function() {
+                document.getElementById('fullscreenImage').src = this.src;
+                document.getElementById('fullscreenOverlay').classList.add('show');
+            });
+        });
+        
+        function closeFullscreen() {
+            document.getElementById('fullscreenOverlay').classList.remove('show');
+        }
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+  <canvas>
+    <script>
+      // create a new hydra-synth instance
+      var hydra = new Hydra({
+        canvas: document.getElementById("myCanvas"),
+        detectAudio: false,
+        enableStreamCapture: false,
+      })
+
+      s0.initImage("https://64.media.tumblr.com/c7626c6e4611b69581cb3d91ea2b033e/cce0d87c9f4993fb-05/s1280x1920/959623d6fdc760d1d31ef550140e4c83ce249cb5.pnj")
+
+      speed = 0.8
+
+      src(s0)
+        .layer(noise(10, 0.6).repeat()
+          .scale(20).thresh(0.7, 0.04)
+          .pixelate().diff(s0)
+          .invert(() => Math.sin(time)).thresh()
+          .modulateScrollX(osc(1))).diff(noise(5, 0.1)
+            .thresh(0.7, 0.04).pixelate().scale(10)).out(o0)
+
+    </script>
+  </canvas>
+
+</body>
+</html>
